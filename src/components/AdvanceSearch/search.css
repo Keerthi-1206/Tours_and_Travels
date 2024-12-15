@@ -1,0 +1,123 @@
+/* Style the container for search fields */
+.box-search-advance .box-search {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly across the row */
+    align-items: center; /* Align items vertically in the center */
+    gap: 15px; /* Space between items */
+    padding: 15px;
+    border: 2px solid #ddd; /* Border around the entire section */
+    border-radius: 10px; /* Rounded corners for the entire section */
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+/* Style for each item: Location, Check-In, Check-Out, and Guest */
+.box-search-advance .box-search .item-search,
+.box-search-advance .box-search .item-search-guest {
+    width: 100%;
+    max-width: 180px; /* Set the max width for each item */
+    padding: 12px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px; /* Font size */
+    color: #333; /* Text color */
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Styling for dropdown select (Check-In, Check-Out) */
+.box-search-advance .box-search .item-search select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #333; /* Text color */
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    background-color: white;
+    appearance: none; /* Remove default dropdown arrow */
+    height: 48px; /* Ensure the dropdown height matches the date picker */
+    box-sizing: border-box; /* Ensure the padding and border are included in the total height */
+}
+
+/* Fix the alignment of the dropdown symbols (arrows) */
+.box-search-advance .box-search .item-search select {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6"><path d="M0 0l5 5 5-5z" fill="#333"/></svg>'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 12px center; /* Adjust the position of the dropdown arrow */
+    background-size: 12px;
+}
+
+/* Ensure the dropdown and datepicker have the same height */
+.box-search-advance .box-search .item-search input[type="date"],
+.box-search-advance .box-search .item-search select {
+    height: 48px; /* Make the height the same for both */
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* Change the appearance of dropdown when selected */
+.box-search-advance .box-search .item-search select:focus,
+.box-search-advance .box-search .item-search input[type="date"]:focus {
+    border-color: #007bff; /* Border color when focused */
+    color: #007bff; /* Text color when focused */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Focus shadow */
+}
+
+/* Styling for the search button */
+.box-search-advance .box-search .item-search .primaryBtn {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    background-color: #007bff; /* Button background color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Search button hover effect */
+.box-search-advance .box-search .item-search .primaryBtn:hover {
+    background-color: #0056b3; /* Darker button shade on hover */
+    transform: translateY(-2px); /* Button lift effect */
+}
+
+/* Media queries for responsive design */
+
+/* For medium screens */
+@media (max-width: 1199px) {
+    .box-search-advance .box-search {
+        flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+        gap: 10px;
+    }
+
+    .box-search-advance .box-search .item-search {
+        width: 48%; /* Two items per row */
+    }
+
+    .box-search-advance .box-search .item-search-guest {
+        width: 48%;
+    }
+
+    .box-search-advance .box-search .primaryBtn {
+        width: 100%; /* Full width for search button */
+    }
+}
+
+/* For small screens */
+@media (max-width: 575px) {
+    .box-search-advance .box-search .item-search,
+    .box-search-advance .box-search .item-search-guest {
+        width: 100%; /* Full width for each item */
+    }
+
+    .box-search-advance .box-search .primaryBtn {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
