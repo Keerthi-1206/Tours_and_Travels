@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
     "lint": "eslint .",
+     "preinstall": "npm config set legacy-peer-deps true",
+     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
